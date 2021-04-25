@@ -1,4 +1,11 @@
-# Spark_AWS_Movie_Recommandation:  and upgraded version of Spark task 10, but run on AWS EC2 to proceed a larger dataset(1m ratings)
+# Spark_AWS_Movie_Recommandation:  determine movie similarity base on aggregated user behavior
+#run on AWS EC2 to proceed a larger dataset(1m ratings)
+
+# Recommander system, item-based collaborative filtering strategy:
+# - select userID, movieID, and rating
+# - find movie rated by the same user(with self-join operation)
+# - compute cosine similarity score for pair of movies
+# - filter, sort and show result
 
 import sys
 from pyspark import SparkConf, SparkContext
